@@ -20,7 +20,7 @@ let s:SHADOW = '#262626'
 let s:BLUISH = '#61afef'
 let s:GREENISH = '#98c379'
 let s:ORANGISH = '#ffb366'
-let s:PURPLEISH = '#c3a1f2'
+let s:CLOUDS = '#799a9b'
 let s:PINK = '#ff66a8'
 
 fun! s:elect (n, ls)
