@@ -34,6 +34,10 @@ fun! s:higui (group, fg, ...)
 	exe 'hi '.a:group.' guifg='.a:fg.' guibg='.bg.' gui='.style
 endfun
 
+fun! s:clear (group)
+	exe 'hi clear '.a:group
+endfun
+
 " General settings
 call s:higui('LineNr', s:DARK_GREY)
 call s:higui('CursorLineNr', s:GREY)
@@ -43,6 +47,10 @@ call s:higui('ErrorMsg', s:ORANGISH)
 
 call s:higui('Directory', s:BLUISH)
 call s:higui('NonText', s:GREY)
+
+call s:higui('SpecialKey', s:GREY)
+call s:clear('SignColumn')
+
 call s:higui('Title', s:GREY)
 
 call s:higui('Todo', s:GREENISH)
@@ -62,7 +70,7 @@ call s:higui('Identifier', s:GREENISH)
 call s:higui('Constant', s:ORANGISH)
 call s:higui('Special', s:ORANGISH)
 
-call s:higui('String', s:PURPLEISH)
+call s:higui('String', s:CLOUDS)
 
 " C specific
 call s:higui('cDefine', s:GREENISH)
