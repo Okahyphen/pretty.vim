@@ -1,6 +1,6 @@
 "  --
 "  Something pretty for Vim, with a focus on Lua and C.
-"  Colin 'Oka' Hall-Coates, MIT 2016 <yo@oka.io>
+"  Colin 'Oka' Hall-Coates, MIT 2021 <yo@oka.io>
 "  --
 
 hi clear
@@ -16,15 +16,19 @@ let g:colors_name = 'pretty'
 let s:GREY = '#abb2bf'
 let s:DARK_GREY = '#989da7'
 let s:DARKER_GREY = '#5c6370'
+
 let s:SHADOW = '#262626'
-let s:BLUISH = '#61afef'
-let s:GREENISH = '#98c379'
-let s:ORANGISH = '#ffb366'
-let s:CLOUDS = '#799a9b'
-let s:PINK = '#ff66a8'
+let s:BRIGHT = '#eeeeee'
+
+let s:BLUISH = '#66abe3'
+let s:GREENISH = '#91b577'
+let s:ORANGISH = '#e3a05d'
+let s:PINK = '#ed68a1'
+
+let s:GRAVEL = '#877a7a'
 
 fun! s:elect (n, ls)
-        return len(a:ls) >= a:n && strlen(a:ls[a:n - 1]) ? a:ls[a:n - 1] : "NONE"
+	return len(a:ls) >= a:n && strlen(a:ls[a:n - 1]) ? a:ls[a:n - 1] : "NONE"
 endfun
 
 fun! s:higui (group, fg, ...)
@@ -37,6 +41,12 @@ endfun
 fun! s:clear (group)
 	exe 'hi clear '.a:group
 endfun
+
+" UI
+call s:higui('Pmenu', s:GRAVEL, s:SHADOW)
+call s:higui('PmenuSel', s:PINK, s:SHADOW)
+call s:higui('PmenuSbar', s:BRIGHT, s:SHADOW)
+call s:higui('PmenuThumb', s:SHADOW, s:BRIGHT)
 
 " General settings
 call s:higui('LineNr', s:DARK_GREY)
@@ -70,7 +80,7 @@ call s:higui('Identifier', s:GREENISH)
 call s:higui('Constant', s:ORANGISH)
 call s:higui('Special', s:ORANGISH)
 
-call s:higui('String', s:CLOUDS)
+call s:higui('String', s:GRAVEL)
 
 " C specific
 call s:higui('cDefine', s:GREENISH)

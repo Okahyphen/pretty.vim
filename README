@@ -2,10 +2,10 @@ This is a very simple syntax highlight making use of only five main colours, who
 
 It has a particular focus on Lua and C, but has sensible enough defaults for most languages. However, YMMV.
 
-It targets GUI versions of (neo)Vim, or terminal emulators that support true colour. It does not support ANSI or 256 sets.
+It targets GUI versions of (neo)Vim, or terminal emulators that support true colour (set termguicolors). It does not support ANSI or 256 sets.
 
 It sets background as dark, and pairs well with a dark terminal.
 
 For extended highlighting, Lua users are encouraged to grab https://github.com/tbastos/vim-lua
 
-Colours heavily inspired by https://github.com/nschneid/vivid-syntax
+Colin Hall-Coates <yo@oka.io>
